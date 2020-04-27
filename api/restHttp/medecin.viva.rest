@@ -1,0 +1,52 @@
+###
+POST http://localhost:3000/sante/medecins HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "Hekima",
+    "postnom": "Lwatanga",
+    "prenom" :"Adrienne"
+}
+###
+POST http://localhost:3000/sante/medecins HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "Neema",
+    "postnom": "Kifungo",
+    "prenom" :"Christelle"
+}
+### 
+GET http://localhost:3000/sante/medecins/3 HTTP/1.1
+
+###
+GET http://localhost:3000/sante/medecins HTTP/1.1
+###
+GET http://localhost:3000/sante/medecins/1/messages/private HTTP/1.1
+###
+POST http://localhost:3000/sante/medecins/2/messages/private/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "msg": "Bonjour Monsieur"
+}
+###
+POST  http://localhost:3000/sante/medecins/2/messages HTTP/1.1
+Content-Type: application/json
+
+{
+    "msg": "Salut"
+}
+###
+DELETE http://localhost:3000/sante/medecins/5 HTTP/1.1
+###
+PUT http://localhost:3000/sante/medecins/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "Hekima",
+    "postnom": "Kambale",
+    "prenom":"Vianney"
+}
+
+

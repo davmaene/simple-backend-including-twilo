@@ -1,0 +1,96 @@
+###
+POST http://localhost:3000/agents HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "Jina",
+    "postnom": "Lwatanga",
+    "prenom" :"Darone"
+}
+###
+POST http://localhost:3000/agents HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "Bikanaba",
+    "postnom": "Kifungo",
+    "prenom" :"Adolphe"
+}
+###
+POST http://localhost:3000/agents/1/messages/broadcasts HTTP/1.1
+content-type: application/json
+
+{
+    "msg":"Bonjour, VIVA RDC ",
+    "contacts": ["+243979049362"]
+}
+### 
+GET http://localhost:3000/agents/2 HTTP/1.1
+
+###
+GET http://localhost:3000/agents HTTP/1.1
+###
+GET http://localhost:3000/agents/1/messages/private HTTP/1.1
+###
+POST http://localhost:3000/agents/1/messages/private/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "msg": "Salut docteur"
+}
+###
+POST  http://localhost:3000/agents/1/messages HTTP/1.1
+Content-Type: application/json
+
+{
+    "msg": "Salut"
+}
+###
+DELETE http://localhost:3000/agents/5 HTTP/1.1
+###
+PUT http://localhost:3000/agents/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "Hekima",
+    "postnom": "Kambale",
+    "prenom":"Vianney"
+}
+
+###
+POST http://localhost:3000/agents/1/hopitaux HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "HG-GOMA"
+}
+
+###
+GET http://localhost:3000/agents/1/hopitaux HTTP/1.1
+
+###
+POST http://localhost:3000/agents/1/hopitaux/1/medecins HTTP/1.1
+content-type: application/json
+
+{
+    "nom" : "Jim",
+    "postnom": "Lebron",
+    "prenom": "Kate"
+}
+###
+GET http://localhost:3000/agents/1/hopitaux/1/medecins HTTP/1.1
+
+###
+GET http://localhost:3000/agents/2/hopitaux/1/medecins/2 HTTP/1.1
+
+### 
+PUT http://localhost:3000/agents/2/hopitaux/1/medecins/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nom" : "James",
+    "postnom": "Lebron",
+    "prenom": "Kate"
+}
+
+DELETE http://localhost:3000/agents/2/hopitaux/1/medecins/1 HTTP/1.1
